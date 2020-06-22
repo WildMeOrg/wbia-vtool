@@ -38,6 +38,8 @@ GET_OS_INFO()
 if (APPLE)
     message(STATUS "Including Homebrew")
 
+    find_package(Eigen3 3 REQUIRED NO_MODULE)
+
     include_directories(/usr/local/include)
     link_directories(/usr/local/lib)
 
